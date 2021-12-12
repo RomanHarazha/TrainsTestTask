@@ -211,108 +211,6 @@ void printSortedMatrix(float matrix[V][V], int stations[V]) {
 	}
 }
 
-void sortByPrice(float trains[50][3], float trainsSorted[V][V]) {
-	for (int i = 0; i < 250; ++i) {
-		//1902
-		if (trains[i][0] == 1902 && trains[i][1] == 1909) {
-			if (trainsSorted[0][1] > trains[i][2]) trainsSorted[0][1] = trains[i][2];
-		}
-		else if (trains[i][0] == 1902 && trains[i][1] == 1921) {
-			if (trainsSorted[0][2] > trains[i][2]) trainsSorted[0][2] = trains[i][2];
-		}
-		else if (trains[i][0] == 1902 && trains[i][1] == 1929) {
-			if (trainsSorted[0][3] > trains[i][2]) trainsSorted[0][3] = trains[i][2];
-		}
-		else if (trains[i][0] == 1902 && trains[i][1] == 1937) {
-			if (trainsSorted[0][4] > trains[i][2]) trainsSorted[0][4] = trains[i][2];
-		}
-		else if (trains[i][0] == 1902 && trains[i][1] == 1981) {
-			if (trainsSorted[0][5] > trains[i][2]) trainsSorted[0][5] = trains[i][2];
-		}
-		//1909
-		else if (trains[i][0] == 1909 && trains[i][1] == 1902) {
-			if (trainsSorted[1][0] > trains[i][2]) trainsSorted[1][0] = trains[i][2];
-		}
-		else if (trains[i][0] == 1909 && trains[i][1] == 1921) {
-			if (trainsSorted[1][2] > trains[i][2]) trainsSorted[1][2] = trains[i][2];
-		}
-		else if (trains[i][0] == 1909 && trains[i][1] == 1929) {
-			if (trainsSorted[1][3] > trains[i][2]) trainsSorted[1][3] = trains[i][2];
-		}
-		else if (trains[i][0] == 1909 && trains[i][1] == 1937) {
-			if (trainsSorted[1][4] > trains[i][2]) trainsSorted[1][4] = trains[i][2];
-		}
-		else if (trains[i][0] == 1909 && trains[i][1] == 1981) {
-			if (trainsSorted[1][5] > trains[i][2]) trainsSorted[1][5] = trains[i][2];
-		}
-		//1921
-		else if (trains[i][0] == 1921 && trains[i][1] == 1902) {
-			if (trainsSorted[2][0] > trains[i][2]) trainsSorted[2][0] = trains[i][2];
-		}
-		else if (trains[i][0] == 1921 && trains[i][1] == 1909) {
-			if (trainsSorted[2][1] > trains[i][2]) trainsSorted[2][1] = trains[i][2];
-		}
-		else if (trains[i][0] == 1921 && trains[i][1] == 1929) {
-			if (trainsSorted[2][3] > trains[i][2]) trainsSorted[2][3] = trains[i][2];
-		}
-		else if (trains[i][0] == 1921 && trains[i][1] == 1937) {
-			if (trainsSorted[2][4] > trains[i][2]) trainsSorted[2][4] = trains[i][2];
-		}
-		else if (trains[i][0] == 1921 && trains[i][1] == 1981) {
-			if (trainsSorted[2][5] > trains[i][2]) trainsSorted[2][5] = trains[i][2];
-		}
-		//1929
-		else if (trains[i][0] == 1929 && trains[i][1] == 1902) {
-			if (trainsSorted[3][0] > trains[i][2]) trainsSorted[3][0] = trains[i][2];
-		}
-		else if (trains[i][0] == 1929 && trains[i][1] == 1909) {
-			if (trainsSorted[3][1] > trains[i][2]) trainsSorted[3][1] = trains[i][2];
-		}
-		else if (trains[i][0] == 1929 && trains[i][1] == 1921) {
-			if (trainsSorted[3][2] > trains[i][2]) trainsSorted[3][2] = trains[i][2];
-		}
-		else if (trains[i][0] == 1929 && trains[i][1] == 1937) {
-			if (trainsSorted[3][4] > trains[i][2]) trainsSorted[3][4] = trains[i][2];
-		}
-		else if (trains[i][0] == 1929 && trains[i][1] == 1981) {
-			if (trainsSorted[3][5] > trains[i][2]) trainsSorted[3][5] = trains[i][2];
-		}
-		//1937
-		else if (trains[i][0] == 1937 && trains[i][1] == 1902) {
-			if (trainsSorted[4][0] > trains[i][2]) trainsSorted[4][0] = trains[i][2];
-		}
-		else if (trains[i][0] == 1937 && trains[i][1] == 1909) {
-			if (trainsSorted[4][1] > trains[i][2]) trainsSorted[4][1] = trains[i][2];
-		}
-		else if (trains[i][0] == 1937 && trains[i][1] == 1921) {
-			if (trainsSorted[4][2] > trains[i][2]) trainsSorted[4][2] = trains[i][2];
-		}
-		else if (trains[i][0] == 1937 && trains[i][1] == 1929) {
-			if (trainsSorted[4][3] > trains[i][2]) trainsSorted[4][3] = trains[i][2];
-		}
-		else if (trains[i][0] == 1937 && trains[i][1] == 1981) {
-			if (trainsSorted[4][5] > trains[i][2]) trainsSorted[4][5] = trains[i][2];
-		}
-		//1981
-		else if (trains[i][0] == 1981 && trains[i][1] == 1902) {
-			if (trainsSorted[5][0] > trains[i][2]) trainsSorted[5][0] = trains[i][2];
-		}
-		else if (trains[i][0] == 1981 && trains[i][1] == 1909) {
-			if (trainsSorted[5][1] > trains[i][2]) trainsSorted[5][1] = trains[i][2];
-		}
-		else if (trains[i][0] == 1981 && trains[i][1] == 1921) {
-			if (trainsSorted[5][2] > trains[i][2]) trainsSorted[5][2] = trains[i][2];
-		}
-		else if (trains[i][0] == 1981 && trains[i][1] == 1929) {
-			if (trainsSorted[5][3] > trains[i][2]) trainsSorted[5][3] = trains[i][2];
-		}
-		else if (trains[i][0] == 1981 && trains[i][1] == 1937) {
-			if (trainsSorted[5][4] > trains[i][2]) trainsSorted[5][4] = trains[i][2];
-		}
-		//1902, 1909, 1921, 1929, 1937, 1981
-	}
-}
-
 void buildGraph(float trainsSorted[V][V], bool graph[V][V]) {
 	for (int i = 0; i < V; ++i) {
 		for (int j = 0; j < V; ++j) {
@@ -470,13 +368,6 @@ void sortStructByPrice(const Train Obj[], float trainsSorted[V][V], float timeSo
 		//1902, 1909, 1921, 1929, 1937, 1981
 	}
 }
-
-/*
-Subtasks:
-	- calculate minimal time for each route.
-	- return Hamiltonian paths with only minimal weight;
-Then display train numbers instead of stations etc.
-*/
 
 int main() {
 	int h1, h2, m1, m2, s1, s2;
