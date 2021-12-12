@@ -6,6 +6,8 @@ using namespace std;
 
 #define V 6
 #define INF 9999
+float minPrice = INF;
+float minTime = INF;
 
 void printSolution(int solution[], int size, float trainsSorted[V][V], float timeSorted[V][V]) {
 	float price = 0;
@@ -145,8 +147,10 @@ void printSolution(int solution[], int size, float trainsSorted[V][V], float tim
 			} 
 		}
 	}
-	if (price < 3720) printf("Price: %.2f", price);
-	if (tripTime < 46) printf("Time: %.2f ", tripTime);
+	printf("| Price: %.2f ", price);
+	printf("Time: %.2f ", tripTime);
+	if (price < minPrice) minPrice = price;
+	if (tripTime < minTime) minTime = tripTime;
 	printf("\n");
 }
 
@@ -556,4 +560,7 @@ int main() {
 	printf("\nINF represents non-existent routes.\n");
 	buildGraph(priceSorted, graph);
 	hamiltonianCycle(graph, priceSorted, timeSorted);
+	printf("\nMinimal price: %.2f", minPrice);
+	printf("\nMinimal time: %.2f\n\n", minTime);
+	system("pause");
 }
